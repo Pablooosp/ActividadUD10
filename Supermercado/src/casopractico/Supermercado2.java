@@ -10,7 +10,7 @@ public class Supermercado2 {
 		Scanner sc = new Scanner(System.in);
 		ArrayList<String> cesta = new ArrayList<>();
 		TreeSet<String> productos = new TreeSet<>();
-		
+		//Se meten los productos en el TreeSet
 		productos.add("Tomate");
 		productos.add("Leche");
 		productos.add("Pan");
@@ -36,10 +36,12 @@ public class Supermercado2 {
 		acceso();
 		System.out.println("Que quieres hacer?");
 		int respuestaacceso = sc.nextInt();
+		//While que entra siempre que la respuesta no sea ni 1 ni 2
 		while(!(respuestaacceso==1) && !(respuestaacceso==2)) {
 			System.out.println("Respuesta no valida");
 			respuestaacceso = sc.nextInt();
 		}
+		//Un if que entra si la respuesta es 1
 		if(respuestaacceso==1) {
 			final String contrasena = "J4v4d0n4";
 			String clave = "";
@@ -128,6 +130,7 @@ public class Supermercado2 {
 				}
 			}
 		}
+		//Creamos if en el que se entra si la respuesta del menu de acceso es 2
 		if(respuestaacceso==2) {
 			menucliente();
 			
@@ -211,6 +214,7 @@ public class Supermercado2 {
 		
 		
 	}
+	//Funciones para llamar mas sencillamente a los menus
 public static void acceso() {
 	System.out.println("********** ACCESO *******\n1. Personal del supermercado\n2. Cliente");
 }

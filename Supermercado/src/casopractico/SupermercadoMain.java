@@ -16,7 +16,7 @@ public class SupermercadoMain {
 		int respuesta = sc.nextInt();
 		TreeSet<String> cesta = new TreeSet<>();
 		TreeSet<String> productos = new TreeSet<>();
-		
+		//Se meten los productos al TreeSet
 		productos.add("Tomate");
 		productos.add("Leche");
 		productos.add("Pan");
@@ -39,12 +39,14 @@ public class SupermercadoMain {
 		productos.add("Napolitana");
 		productos.add("Batido");
 
-		
+		//Se abre un while que estara siempre activo mientras la respuesta no sea 6
 		while(!(respuesta==6)) {
+			//While que si pones de respuesta algo que no sea 1,2,3,4,5,6 entras
 			while(!(respuesta==1) && !(respuesta==2) && !(respuesta==3) && !(respuesta==4) && !(respuesta==5) && !(respuesta==6)) {
 				System.out.println("Respuesta no valida");
 				respuesta = sc.nextInt();
 			}
+			//Abrimos un switch con 5 opciones distintas segun el menu requiere
 			switch(respuesta) {
 			case 1:
 				System.out.println(productos);
@@ -128,6 +130,7 @@ public class SupermercadoMain {
 		
 	
 	}
+	//Creamos un public static para poder llamar al menu cuando lo necesitemos de forma sencilla
 public static void menu () {
 	System.out.println("********** MENÚ ******* \n1. Mostrar productos del supermercado\n2. Añadir productos al carrito\n3. Mostrar carrito de la compra ordenado"
 			+ "\n4. Consultar producto del carrito\n5. Cambiar un producto por otro\n6. Salir");
